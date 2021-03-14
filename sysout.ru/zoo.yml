@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: zoo
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      fail-fast: true
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+  config:
+    name: zoo
+    import: 'optional:configserver:'
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoint:
+    info:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include:
+          - refresh
+          - bus-refresh
+          - bus-env
+
+greetings:
+  greeting: git zoo hi
