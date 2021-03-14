@@ -34,6 +34,3 @@ management:
           - refresh
           - bus-refresh
           - bus-env
-
-greetings:
-  greeting: git zoo hi
