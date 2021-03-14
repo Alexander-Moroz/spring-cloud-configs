@@ -13,8 +13,6 @@ spring:
         enabled: true
       trace:
         enabled: true
-  config:
-    import: 'optional:configserver:'
   rabbitmq:
     host: localhost
     port: 5672
