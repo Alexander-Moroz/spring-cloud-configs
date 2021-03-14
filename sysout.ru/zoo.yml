@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: zoo
   cloud:
     loadbalancer:
       ribbon:
