@@ -6,7 +6,6 @@ spring:
     config:
       fail-fast: true
     bus:
-      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
       enabled: true
       refresh:
         enabled: true
