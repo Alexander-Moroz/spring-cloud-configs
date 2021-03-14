@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: zoo
   cloud:
     loadbalancer:
       ribbon:
@@ -17,7 +15,6 @@ spring:
       trace:
         enabled: true
   config:
-    name: zoo
     import: 'optional:configserver:'
   rabbitmq:
     host: localhost
