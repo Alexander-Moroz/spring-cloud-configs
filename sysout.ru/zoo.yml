@@ -1,1 +1,2 @@
-greeting: git zoo 5 hi
+greetings:
+  greeting: git zoo hi

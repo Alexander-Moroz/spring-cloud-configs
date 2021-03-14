@@ -1,1 +1,2 @@
-greeting: hi
+greetings:
+  greeting: git application hi
