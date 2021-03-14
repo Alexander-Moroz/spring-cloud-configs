@@ -6,7 +6,6 @@ spring:
     config:
       fail-fast: true
     bus:
-      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
       enabled: true
       refresh:
         enabled: true
@@ -21,16 +20,3 @@ spring:
     port: 5672
     username: guest
     password: guest
-
-management:
-  endpoint:
-    info:
-      enabled: true
-  endpoints:
-    enabled-by-default: true
-    web:
-      exposure:
-        include:
-          - refresh
-          - bus-refresh
-          - bus-env
