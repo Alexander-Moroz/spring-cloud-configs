@@ -6,6 +6,9 @@ spring:
       ribbon:
         enabled: false
     config:
+      name: zoo
+      profile: default
+      label: main
       fail-fast: true
     bus:
       enabled: true
