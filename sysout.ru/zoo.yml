@@ -39,4 +39,4 @@ management:
           - bus-env
 
 greetings:
-  greeting: local zoo hi 3
+  greeting: git zoo hi
