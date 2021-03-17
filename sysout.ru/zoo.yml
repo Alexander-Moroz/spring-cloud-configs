@@ -39,5 +39,9 @@ management:
           - bus-refresh
           - bus-env
 
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+
 greetings:
   greeting: git zoo hi 2
