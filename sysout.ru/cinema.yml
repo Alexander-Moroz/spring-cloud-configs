@@ -26,6 +26,10 @@ spring:
     username: guest
     password: guest
 
+feign:
+  circuitbreaker:
+    enabled: true
+
 management:
   endpoint:
     info:
