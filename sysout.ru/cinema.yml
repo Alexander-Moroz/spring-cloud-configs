@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: cinema
+  config:
+    name: cinema
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      name: cinema
+      profile: default
+      label: main
+      fail-fast: true
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoint:
+    info:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include:
+          - refresh
+          - bus-refresh
+          - bus-env
+logging:
+  level:
+    com.amoroz.servicecinema: DEBUG
