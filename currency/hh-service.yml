@@ -1,0 +1,45 @@
+server:
+  port: 8094
+
+spring:
+  application:
+    name: hh-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      name: hh-service
+      profile: default
+      label: main
+      fail-fast: true
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+management:
+  enabled-by-default: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    com.amoroz.hhservice: DEBUG
+
+hh:
+  api-url: https://api.hh.ru/
+  vacancies-uri: vacancies
+  area: 2 #spb
+  text: Java
+  #todo https://github.com/hhru/api/blob/master/docs/areas.md#areas
