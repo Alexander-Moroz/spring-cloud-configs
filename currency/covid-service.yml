@@ -1,0 +1,23 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: covid-service
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    com.amoroz.covidservice: DEBUG
+
+coronavirus:
+  url: https://xn--80aesfpebagmfblc0a.xn--p1ai
