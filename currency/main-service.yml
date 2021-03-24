@@ -1,0 +1,38 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: main-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      name: main-service
+      profile: default
+      label: main
+      fail-fast: true
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+management:
+  enabled-by-default: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    com.amoroz.mainservice: DEBUG
