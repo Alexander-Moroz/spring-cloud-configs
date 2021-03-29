@@ -1,0 +1,41 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: crimea-news-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      name: crimea-news-service
+      profile: default
+      label: main
+      fail-fast: true
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+management:
+  enabled-by-default: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    com.amoroz.newsservice: DEBUG
+
+news:
+  crimea-url: https://allcrimea.net/news/rss.xml
