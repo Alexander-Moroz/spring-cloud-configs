@@ -1,0 +1,46 @@
+server:
+  port: 8098
+
+spring:
+  application:
+    name: yandex-news-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      name: yandex-news-service
+      profile: default
+      label: main
+      fail-fast: true
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+management:
+  enabled-by-default: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    com.amoroz.newsservice: DEBUG
+
+news:
+  yandex-url: https://yandex.ru/portal/api/data/1/?block=news_inserts&content=api_data_big&lang=ru&news_exp=exp_stub #main
+  yandex-urls: {
+    MAIN: https://news.yandex.ru/index.rss, #MAIN
+    SPB: https://news.yandex.ru/Saint_Petersburg/index.rss, #SPB
+    CRIMEA: https://news.yandex.ru/Republic_of_Crimea/index.rss #CRIMEA
+  }
