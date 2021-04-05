@@ -42,5 +42,6 @@ open-weather:
   lat: 60.0158551
   lon: 30.3685371
   units: metric
-  appid: 07cb39d0d64307ac8862d0136a00bd0e
+  appid: '{cipher}AQBxivvTWMIWZkuf3li/SO4YAVWXP1fR2LSzraJEeX78ga8c2MLmOP9hO01TbZjTgiTZ6PGoUfw/luZbp43+bCjG4RvmAI0fT7NIsG8FLzX/NmjLYdCsSUqd+rf8SHHdGmHp7h6sNGwKNhDMgwdsgjTcr6CJrY8qk9omWkz08ohDc7Gfkk+Vq5wCizw3u/reNhe9w3yTHSy3yTnNvvru0DIhJHtWLE+4OICQPBX9liSXdUWpWWzQ6OqaSpbSZB+Tm2GBeN8YOvm2INUsSwfXQI6w1qq7fX29e9gMUT/PW39zevu++c4/ddN/T3xZkCYImlMveOSyxn4aBgWQabndQYT6I+73eK/QBSvIpyM4wE/39ABfmws4znpl+3I79KBVKQH+vomcIX+La6VDVoBwkZvnbDvOn7hsclsEkSry/sVrCw=='
+  #appid: 07cb39d0d64307ac8862d0136a00bd0e
   #https://openweathermap.org/current
